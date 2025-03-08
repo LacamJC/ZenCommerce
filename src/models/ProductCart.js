@@ -16,11 +16,10 @@ const ProductCart = sequelize.define("ProductCart", {
         type: DataTypes.INTEGER
     },
 
-    amount: {
+    quantity: {
         type: DataTypes.INTEGER
     }
 })
 
-// sequelize.sync({force:true})
 
 module.exports = ProductCart

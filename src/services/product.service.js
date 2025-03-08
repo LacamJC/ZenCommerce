@@ -1,4 +1,4 @@
-const Product = require("../models/Product")
+const { Product } = require("../models/associations")
 
 exports.getProduct = async () => {
     return await Product.findAll()

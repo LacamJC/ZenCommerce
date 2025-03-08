@@ -1,4 +1,4 @@
-const Cart = require("../models/Cart")
+const { Cart } = require("../models/associations")
 
 exports.getCart = async () => {
     return await Cart.findAll()

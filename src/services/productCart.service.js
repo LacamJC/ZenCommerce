@@ -1,5 +1,5 @@
-const ProductCart = require("../models/ProductCart")
+const { ProductCart } = require("../models/associations")
 
-exports.getProductCart = async() => {
+exports.getProductCart = async () => {
     return await ProductCart.findAll()
 }
