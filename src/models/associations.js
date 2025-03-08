@@ -11,11 +11,14 @@ async function databaseSync() {
 
         console.log("==== Tabelas sincronizadas com sucesso ====")
     }
-    catch(error) {
+    catch (error) {
         console.log(`Erro ao sincronizar tabelas: ${error}`)
     }
 }
 
-databaseSync()
+if (process.env.DEV_MODE == "true") {
+
+    databaseSync()
+}
 
 module.exports = { User, Product, ProductCart, Cart }

@@ -40,6 +40,24 @@ exports.validateName = (name) => {
     return null
 }
 
+exports.validateInput = (value, name) => {
+    console.log("Esta rodando")
+    if (value === undefined || value === null) {
+        return { message: `${name} não pode ser nulo` }
+    }
+
+    // if (typeof (value) !== "string" || !isNaN(Number(value))) {
+    //     return { message: `O ${name} deve ser do tipo STRING` }
+    // }
+
+    if (value.trim().length <= 1) {
+        return { message: `${name} deve conter pelo menos 2 caracteres` }
+    }
+
+    return null
+
+}
+
 
 exports.validateEmail = async (email) => {
     if (email === null || email === undefined) {
