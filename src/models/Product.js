@@ -22,6 +22,7 @@ const Product = sequelize.define("Product", {
 
     image: {
         type: DataTypes.STRING,
+        allowNull: true,
         defaultValue : "https://placehold.co/300x300"
     },
 

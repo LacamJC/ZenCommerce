@@ -4,6 +4,11 @@ exports.getProduct = async () => {
     return await Product.findAll()
 }
 
+exports.getProductById = async (id) => {
+    console.log("AQUI")
+    return await Product.findOne({where: {id : id}})
+}
+
 exports.createProduct = async (data) => {
     const {
         name,

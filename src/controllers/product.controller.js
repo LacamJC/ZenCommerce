@@ -9,6 +9,17 @@ exports.getProduct = async (req,res) => {
     }
 }
 
+exports.getProductById = async (req,res) => {
+   
+    try {
+        const product = await productService.getProductById(req.params.id)
+        res.status(200).json(product)
+    }
+    catch(error) {
+        res.status(500).json({message: error.message})
+    }
+}
+
 exports.createProduct = async (req,res) => {
     try {
         const product = await productService.createProduct(req.body)
